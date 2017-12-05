@@ -78,6 +78,14 @@ app.get('/about', (req, res) => {
 	});
 });
 
+app.get('/projects', (req, res) => {
+	res.render('projects.hbs', {
+		pageTitle: 'Project Portfolio',
+		projectPortfolio: "This will eventually hold a portfolio of projects.",
+	});
+});
+
+
 app.get('/bad', (req, res) => {
 	res.send({
 		errorMessage: 'Unable to fulfill this request'
